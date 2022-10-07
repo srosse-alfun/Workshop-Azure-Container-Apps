@@ -7,7 +7,7 @@ env:
   RESOURCE_GROUP: "RG-Lab3"
   LOCATION: "eastus2"
   CONTAINERAPPS_ENVIRONMENT: "environment-lab-3"
-  LOG_ANALYTICS_NAME: "pierrc-workspace-lab-3"
+  LOG_ANALYTICS_NAME: "zol-workspace-lab-3"
   ACR_NAME: "acrlab3zol"
   ##################################################################################################################################################################################
   # Nous sommes dans un Workshop !                                                                                                                                                 #
