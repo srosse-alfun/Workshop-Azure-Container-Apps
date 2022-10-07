@@ -23,6 +23,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout du Repo
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
+
+      - name: Login Azure
+        uses: azure/login@24848bc889cfc0a8313c2b3e378ac0d625b9bc16
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Installation du provider Microsoft.App
+        run: |
+          az extension add --name containerapp --upgrade
+          az provider register --namespace Microsoft.App
+          az provider register --namespace Microsoft.OperationalInsights
       - name: Create "Table"
         uses: azure/mysql@093f3af08a63a1d99485a1d93d3771b684625875
         with:
